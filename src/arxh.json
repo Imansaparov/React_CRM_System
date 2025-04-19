@@ -1,0 +1,78 @@
+src/
+├── app/                     # Application initialization layer
+│   ├── providers/           # Application providers
+│   │   ├── theme/           # Theme provider
+│   │   │   └── ThemeProvider.tsx
+│   │   └── index.ts         # Export all providers
+│   ├── store/               # Redux store setup
+│   │   ├── index.ts         # Store configuration
+│   │   └── rootReducer.ts   # Root reducer
+│   ├── styles/              # Global styles
+│   │   └── index.css
+│   ├── index.tsx            # Entry point
+│   └── App.tsx              # Main application component
+│
+├── pages/                   # Application pages
+│   └── MoviesPage/          # Movie catalog page
+│       ├── ui/              # Page UI components
+│       │   └── MoviesPage.tsx
+│       └── index.ts         # Page exports
+│
+├── widgets/                 # Complex composite components (domain-specific)
+│   └── MovieTable/          # Movie table widget
+│       ├── ui/              # Widget UI components
+│       │   └── MovieDataGrid.tsx
+│       └── index.ts         # Widget exports
+│
+├── features/                # User scenarios, processes
+│   ├── themeToggle/         # Theme switching feature
+│   │   ├── ui/              # Feature UI components
+│   │   │   └── ThemeToggleButton.tsx
+│   │   └── index.ts         # Feature exports
+│   │
+│   └── tableSettings/       # Table settings persistence feature
+│       ├── model/           # Feature business logic
+│       │   └── useTableSettingsStore.ts
+│       └── index.ts         # Feature exports
+│
+├── entities/                # Business entities
+│   └── movie/               # Movie entity
+│       ├── ui/              # Entity UI components
+│       │   ├── MovieCard.tsx
+│       │   ├── MovieDetailsModal.tsx
+│       │   └── MovieImageModal.tsx
+│       ├── model/           # Entity business logic
+│       │   ├── moviesSlice.ts   # Redux slice
+│       │   ├── selectors.ts     # Redux selectors
+│       │   ├── hooks.ts         # Custom hooks
+│       │   └── types.ts         # Entity types
+│       └── index.ts         # Entity exports
+│
+└── shared/                  # Reusable infrastructure modules
+├── api/                 # API clients
+│   └── tmdb/            # TMDB API client
+│       ├── tmdbApi.ts   # API client implementation
+│       └── index.ts     # API exports
+│
+├── ui/                  # UI kit components
+│   ├── LoadingIndicator/
+│   │   └── index.tsx
+│   └── ErrorBoundary/
+│       └── index.tsx
+│
+├── lib/                 # Utility libraries
+│   ├── hooks/           # Custom hooks
+│   │   ├── useLocalStorage.ts
+│   │   └── index.ts
+│   └── helpers/         # Helper functions
+│       ├── formatters.ts
+│       └── index.ts
+│
+├── config/              # Global configuration
+│   └── constants.ts     # Constants and environment variables
+│
+└── types/               # TypeScript types
+└── movie.ts         # Movie-related types
+
+
+
